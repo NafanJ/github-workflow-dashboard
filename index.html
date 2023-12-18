@@ -24,6 +24,44 @@
         <div class="workflow-container">
             <button id="triggerWorkflowButton">Trigger Workflow</button>
         </div>
+
+    <script>
+        document.getElementById('triggerWorkflowButton').addEventListener('click', triggerWorkflow);
+
+        async function triggerWorkflow() {
+            const repositoryOwner = 'NafanJ';
+            const repositoryName = 'securfiy_automation';
+            const eventType = 'remote-trigger';
+
+            const accessToken = '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'; // Make sure to keep this secure
+            const apiUrl = `https://api.github.com/repos/NafanJ/securify_automation/dispatches`;
+
+            const eventData = {
+                event_type: eventType,
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                    body: JSON.stringify(eventData),
+                });
+
+                if (response.ok) {
+                    alert('Workflow triggered successfully!');
+                } else {
+                    const errorMessage = await response.text();
+                    alert(`Error triggering workflow: ${errorMessage}`);
+                }
+            } catch (error) {
+                console.error('Error triggering workflow:', error.message);
+                alert('An error occurred while triggering the workflow.');
+            }
+        }
+    </script>
 </body>
 
 </html>

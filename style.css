@@ -1,0 +1,24 @@
+#triggerWorkflowButton{
+    border-radius: 10px;
+}
+
+
+.header{
+    display: flex;
+}
+
+nav > ul{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+}
+
+.workflow-container{
+    display: flex;
+    justify-content: space-evenly;
+}

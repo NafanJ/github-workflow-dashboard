@@ -7,12 +7,6 @@
     display: flex;
 }
 
-nav > ul{
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-}
-
 .hero{
     display: flex;
     justify-content: center;
@@ -20,5 +14,22 @@ nav > ul{
 
 .workflow-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.workflow{
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+    max-height: 20vh;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#robot{
+    height: 10vh;
+    width: auto;
 }

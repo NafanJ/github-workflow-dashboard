@@ -9,21 +9,15 @@
 </head>
 
 <body>
-        <div class="header">
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Page 2</li>
-                    <li>Page 3</li>
-                </ul>
-            </nav>
-        </div>
-        <div class="hero">
-            <h3>Github Automation</h3>
-        </div>
-        <div class="workflow-container">
+    <div class="hero">
+        <h3>Github Automation</h3>
+    </div>
+    <div class="workflow-container">
+        <div class="workflow">
+            <img id="robot" src="./assets/robot.svg" alt="">
             <button id="triggerWorkflowButton">Trigger Workflow</button>
         </div>
+    </div>
 
     <script>
         document.getElementById('triggerWorkflowButton').addEventListener('click', triggerWorkflow);
